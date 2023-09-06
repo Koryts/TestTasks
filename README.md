@@ -18,16 +18,4 @@
 
 1) Постройте запрос, который выводит из Table1 только те записи(строки), которых нет в таблице Table2, включая повторы (в решении нельзя использовать except, minus и intersect).
 
-SELECT * FROM Table1
-WHERE NOT EXISTS (
-    SELECT * 
-    FROM Table2 
-    WHERE Table2.id = Table1.id)
-
 2) Постройте запрос, который выводит только те записи(строки) Table1, которые есть в Table2, исключая повторы (в решении нельзя использовать except, minus и intersect).
-
-SELECT DISTINCT * FROM Table1
-WHERE EXISTS (
-    SELECT * 
-    FROM Table2 
-    WHERE Table2.id = Table1.id)
