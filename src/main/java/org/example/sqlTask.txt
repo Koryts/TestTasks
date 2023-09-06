@@ -1,0 +1,15 @@
+Задачи по SQL
+-----------------------------------------------------------------
+1)
+SELECT * FROM Table1
+WHERE NOT EXISTS (
+    SELECT *
+    FROM Table2
+    WHERE Table2.id = Table1.id)
+
+2)
+SELECT DISTINCT * FROM Table1
+WHERE EXISTS (
+    SELECT *
+    FROM Table2
+    WHERE Table2.id = Table1.id)
